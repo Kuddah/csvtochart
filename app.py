@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import json
 import plotly.express as px
+import sys
 import plotly
 from flask import Flask, render_template_string, request
 import os
@@ -102,6 +103,4 @@ def index():
     '''
 
 if __name__ == '__main__':
-    if not os.path.exists(app.config['UPLOAD_FOLDER']):
-        os.makedirs(app.config['UPLOAD_FOLDER'])
     app.run(debug=True)
